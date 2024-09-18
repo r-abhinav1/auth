@@ -1,7 +1,57 @@
-
+<div class="container mt-4">
+    <div class="card shadow-lg p-4 bg-grey">
+      <h4 class="card-title mb-3 text-center">Signup Form</h4>
+      <form [formGroup]="signupForm" >
+        <!-- Signup Form Fields -->
+        <mat-form-field appearance="fill" class="form-field mb-3">
+          <mat-label>Username</mat-label>
+          <input matInput id="username" formControlName="username" placeholder="Enter username" required>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field mb-3">
+          <mat-label>Email</mat-label>
+          <input matInput id="email" formControlName="email" type="email" placeholder="Enter email" required>
+        </mat-form-field>
+  
+        <mat-form-field appearance="fill" class="form-field mb-3">
+          <mat-label>Password</mat-label>
+          <input matInput id="password" formControlName="password" type="password" placeholder="Enter password" required>
+        </mat-form-field>
+  
+        <!-- Profile Picture Upload -->
+        <div class="form-group mb-3">
+          <mat-label>Upload Profile Picture</mat-label>
+          <input type="file" id="profile-pic" (change)="onFileChange($event)" accept="image/*" class="form-control">
+          <div *ngIf="profilePicUrl" class="text-center mt-3">
+            <img [src]="profilePicUrl" alt="Profile Picture" class="img-thumbnail" style="max-width: 200px;">
+          </div>
+        </div>
+  
+        <!-- Camera Section -->
+        <div class="form-group mb-4">
+          <div class="position-relative d-flex justify-content-center biometric-container">
+            <video #video id="video" width="420" height="360" class="border rounded" autoplay muted></video>
+            <button mat-raised-button color="primary" class="rounded-button capture-button" (click)="captureImage()">Capture Image</button>
+            <!-- <div class="biometric-animation">
+              <div class="circle-overlay"></div>
+            </div> -->
+          </div>
+        </div>
+        
+  
+  
+        <!-- Submit Button -->
+        <div class="form-group mb-3">
+          <button mat-raised-button color="primary" class="rounded-button w-100" [disabled]="!signupForm.valid || !isImageCaptured" (click)="onSubmit()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
 <div class="form-container">
   <p class="title">Sign Up</p>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="signupForm">
       <div class="input-group">
           <label for="username">Username</label>
           <input formControlName="username" type="text" id="username" placeholder="">
