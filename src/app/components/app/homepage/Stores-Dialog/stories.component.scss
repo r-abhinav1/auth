@@ -1,0 +1,146 @@
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.main-story {
+  margin-bottom: 20px;
+}
+
+.related-stories {
+  margin-top: 20px;
+}
+
+.related-story {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.related-story img {
+  margin-right: 10px;
+}
+
+
+/* stories.component.scss */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+
+.story-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.story-image {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  margin-right: 5px; /* Space between images */
+}
+
+.separator-image {
+  width: 10px; /* Width of the separator line */
+  height: 80px; /* Height to match the profile picture */
+}
+
+
+.story-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.story-image {
+  width: 120px; /* Increased size for profile and violation images */
+  height: 120px; /* Increased size for profile and violation images */
+  margin-right: 10px; /* Adjust space between images */
+}
+
+.separator-image {
+  width: 20px; /* Increased width of the separator */
+  height: 120px; /* Height to match the profile picture */
+}
+
+
+mat-card {
+  width: 90%; /* Adjust the width of the card to your preference */
+  max-width: 800px; /* Set a maximum width for the card */
+  margin: 0 auto; /* Center the card horizontally */
+  padding: 20px; /* Add padding inside the card */
+}
+
+mat-card-content {
+  padding: 20px; /* Add padding inside the card content */
+}
+
+.story-image-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add space below the images */
+}
+
+.story-image {
+  width: 150px; /* Increased size for profile and violation images */
+  height: 150px; /* Increased size for profile and violation images */
+  margin-right: 15px; /* Adjust space between images */
+}
+
+.separator-image {
+  width: 25px; /* Increased width of the separator */
+  height: 150px; /* Height to match the profile picture */
+}
+
+
+
+mat-card {
+  width: 100%; /* Make the card take up the full width of its container */
+  max-width: 1200px; /* Set a maximum width for the card */
+  margin: 20px auto; /* Center the card horizontally with margin */
+  padding: 30px; /* Add padding inside the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for visual effect */
+}
+
+mat-card-content {
+  padding: 30px; /* Add padding inside the card content */
+}
+
+.story-image-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; /* Add space below the images */
+}
+
+.story-image {
+  width: 200px; /* Increased size for profile and violation images */
+  height: 200px; /* Increased size for profile and violation images */
+  margin-right: 20px; /* Adjust space between images */
+}
+.story-image-default
+{
+  width: 400px; /* Increased size for profile and violation images */
+  height: 200px; /* Increased size for profile and violation images */
+  margin-right: 20px; 
+}
+
+.separator-image {
+  width: 30px; /* Increased width of the separator */
+  height: 200px; /* Height to match the profile picture */
+}
+
+mat-card-title {
+  font-size: 24px; /* Optional: Increase title font size for better readability */
+}
+
+mat-card-content p {
+  font-size: 18px; /* Optional: Increase font size for better readability */
+}

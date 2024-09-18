@@ -1,0 +1,24 @@
+mat-dialog-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1976d2; // Customize color as needed
+}
+
+mat-dialog-content {
+  font-size: 16px;
+  color: #333;
+  padding: 16px;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.mat-button {
+  background-color: #1976d2; // Customize button color as needed
+  color: #fff;
+  &:hover {
+    background-color: #1565c0; // Darker shade on hover
+  }
+}

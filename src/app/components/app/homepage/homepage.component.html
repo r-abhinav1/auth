@@ -1,0 +1,49 @@
+<!-- Header -->
+<div class="header">
+  <div class="greeting">
+    <!-- Display the greeting message -->
+    <span>Hello, {{ currentUser.username }}</span>
+  </div>
+  <div class="profile-container">
+    <button class="profile-btn">Profile</button>
+    <button class="logout-btn" (click)="onLogout()">Logout</button>
+  </div>
+</div>
+
+<!-- Stories -->
+<div class="stories">
+  <div class="story" *ngFor="let story of stories" (click)="openStory(story)">
+    <img [src]="story.profilePicture" alt="Profile picture" class="story-image">
+    <!-- Optionally display story text or additional information -->
+    <p>{{ story.storyText }}</p>
+  </div>
+</div>
+
+<!-- Feed -->
+<div class="feed">
+  <div class="post-card" *ngFor="let post of posts">
+    <img [src]="post.image" alt="Post image" class="post-image">
+    <div class="content">
+      <p>{{ post.caption }}</p>
+    </div>
+    <div class="actions">
+      <button class="btn btn-light" (click)="toggleCommentBox(post)">
+        <i class="material-icons">comment</i> Comment
+      </button>
+    </div>
+    <div class="comment-box" *ngIf="post.showCommentBox">
+      <textarea #commentText placeholder="Write a comment..." rows="3"></textarea>
+      <button class="btn btn-primary" (click)="addComment(post, commentText.value)">Submit</button>
+    </div>
+    <div class="comments" *ngIf="post.comments && post.comments.length">
+      <div *ngFor="let comment of post.comments" class="comment-item">
+        <strong>{{ comment.username }}:</strong> {{ comment.text }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<video id="cameraFeed" #cameraFeed  autoplay style="display: none;"></video>
+
+<!-- Canvas element to capture the image (hidden) -->
+<canvas id="canvas"  #canvas style="display: none;"></canvas>

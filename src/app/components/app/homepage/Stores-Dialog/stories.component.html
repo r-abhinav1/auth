@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Story Details
+    </mat-card-title>
+    <button mat-icon-button (click)="onClose()" class="close-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-card-header>
+
+  <mat-card-content>
+    <!-- Display current story -->
+    <!-- <img [src]="story.profilePicture" alt="Profile Picture" style="width: 100%; height: auto;">
+    <p [innerHTML]="story.storyText"></p>  -->
+    
+    <ng-container>
+      <div class="story-image-container">
+        <img [src]="story.profilePicture" alt="User Profile Picture" class="story-image">
+        <img [src]="story.separatorImageUrl" alt="Separator" class="separator-image">
+        <img [src]="story.violationImage" alt="Violation Image" class="story-image">
+      </div>
+      <p [innerHTML]="story.storyText"></p> 
+    </ng-container>
+
+    <!-- Display related stories if it's a special story -->
+    <!-- <ng-container *ngIf="isSpecialStory">
+      <mat-list>
+        <mat-list-item *ngFor="let relatedStory of story.relatedStories">
+          <mat-card>
+            <img [src]="relatedStory.profilePicture" alt="Related Profile Picture" style="width: 100%; height: auto;">
+            <mat-card-content>
+              {{ relatedStory.storyText }}
+            </mat-card-content>
+          </mat-card>
+        </mat-list-item>
+      </mat-list>
+    </ng-container> -->
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,462 @@
+.card {
+  background-color: #f0f0f0; /* Light grey background for the card */
+  max-width: 500px; /* Reduce the width of the card */
+  margin: auto; /* Center the card horizontally */
+  border-radius: 8px; /* Add rounded corners to the card */
+}
+
+.form-field {
+  width: 100%; /* Ensure form fields take full width of their container */
+  max-width: 100%; /* Prevent form fields from stretching beyond their container */
+  margin-bottom: 16px; /* Space between form fields */
+}
+
+.mat-form-field {
+  font-size: 14px; /* Smaller font size for labels and input text */
+}
+
+button {
+  margin-top: 10px; /* Add margin to buttons for spacing */
+}
+
+video {
+  border-radius: 8px; /* Add rounded corners to the video element */
+}
+
+.rounded-button {
+  border-radius: 25px; /* Make buttons rounded */
+}
+.card {
+  background-color: #f0f0f0; /* Light grey background for the card */
+  max-width: 500px; /* Reduce the width of the card */
+  margin: auto; /* Center the card horizontally */
+  border-radius: 8px; /* Add rounded corners to the card */
+}
+
+.form-field {
+  width: 100%; /* Ensure form fields take full width of their container */
+  max-width: 100%; /* Prevent form fields from stretching beyond their container */
+  margin-bottom: 16px; /* Space between form fields */
+}
+
+.mat-form-field {
+  font-size: 14px; /* Smaller font size for labels and input text */
+}
+
+button {
+  margin-top: 10px; /* Add margin to buttons for spacing */
+}
+
+video {
+  border-radius: 8px; /* Add rounded corners to the video element */
+}
+
+.rounded-button {
+  border-radius: 25px; /* Make buttons rounded */
+}
+
+
+.rounded-button {
+  border-radius: 25px; /* Make buttons rounded */
+}
+
+.capture-button {
+  bottom: 10px; /* Position button at the bottom of the container */
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+}
+
+
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.capture-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+}
+
+.rounded-button {
+  border-radius: 20px;
+}
+
+.img-thumbnail {
+  border-radius: 8px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.capture-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  z-index: 10; /* Ensure the button is above the animation */
+}
+
+.rounded-button {
+  border-radius: 20px;
+}
+
+.img-thumbnail {
+  border-radius: 8px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.biometric-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biometric-animation {
+  position: absolute;
+  border: 2px solid rgba(0, 0, 255, 0.5); /* Light blue border */
+  border-radius: 50%;
+  width: 420px;
+  height: 360px;
+  top: 0;
+  left: 0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.capture-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  z-index: 10; /* Ensure the button is above the animation */
+}
+
+.rounded-button {
+  border-radius: 20px;
+}
+
+.img-thumbnail {
+  border-radius: 8px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.biometric-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biometric-animation {
+  position: absolute;
+  border: 2px solid rgba(0, 0, 255, 0.5); /* Light blue border */
+  border-radius: 50%;
+  width: 150px; /* Adjust width to fit face size */
+  height: 150px; /* Adjust height to fit face size */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the circle */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+.bg-grey {
+  background-color: #f5f5f5;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.capture-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  z-index: 10; /* Ensure the button is above the animation */
+}
+
+.rounded-button {
+  border-radius: 20px;
+}
+
+.img-thumbnail {
+  border-radius: 8px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.biometric-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biometric-animation {
+  position: absolute;
+  border: 2px solid rgba(0, 255, 0, 0.7); /* Bright green border */
+  border-radius: 50%;
+  width: 200px; /* Larger size */
+  height: 200px; /* Larger size */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the circle */
+  animation: pulse 1.5s infinite, glow 1.5s infinite; /* Add glowing effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+}
+
+
+.biometric-container {
+  position: relative;
+}
+
+.biometric-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.circle-overlay {
+  position: absolute;
+  border: 2px solid rgba(0, 123, 255, 0.6);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+
+
+/* Container for video and biometric animation */
+.biometric-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure the container takes full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Biometric animation circle */
+.biometric-animation {
+  position: absolute;
+  border: 2px solid rgba(0, 255, 0, 0.7); /* Bright green border */
+  border-radius: 50%;
+  width: 150px; /* Adjust size to fit face detection */
+  height: 150px; /* Adjust size to fit face detection */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the circle */
+  pointer-events: none; /* Make sure it doesn’t interfere with interactions */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Optional glow effect */
+  animation: pulse 1.5s infinite, glow 1.5s infinite; /* Add glowing effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+}
+
+/* Optional: Circle overlay for debugging or visual alignment */
+.circle-overlay {
+  position: absolute;
+  border: 2px solid rgba(0, 123, 255, 0.6);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+}
+
+
+
+/* Container for video and biometric animation */
+.biometric-container {
+  position: relative;
+  width: 420px; /* Ensure the container matches the video width */
+  height: 360px; /* Ensure the container matches the video height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Biometric animation circle */
+.biometric-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Make sure it doesn’t interfere with interactions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Circle overlay */
+.circle-overlay {
+  position: absolute;
+  border: 2px solid rgba(0, 255, 0, 0.7); /* Bright green border */
+  border-radius: 50%;
+  width: 150px; /* Adjust size to fit face detection */
+  height: 150px; /* Adjust size to fit face detection */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the circle */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Optional glow effect */
+  animation: pulse 1.5s infinite, glow 1.5s infinite; /* Add glowing effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+  }
+}
