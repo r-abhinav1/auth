@@ -4,15 +4,16 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="input-group">
             <label for="username">Username</label>
-            <input formControlName="username" type="text" id="username" placeholder="">
+            <input formControlName="username" type="text" id="username" placeholder="Enter Username">
         </div>
         <div class="input-group">
             <label for="password">Password</label>
-            <input formControlName="password" type="password" id="password" placeholder="">
+            <input formControlName="password" type="password" id="password" placeholder="Enter Password">
         </div>
         <br>
         <!-- <button class="sign" type="submit">Sign in</button> -->
-        <button class="animated-button sign" type="submit">
+         <div id="button-container">
+          <button class="animated-button sign" type="submit">
             <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
@@ -26,10 +27,20 @@
               ></path>
             </svg>
           </button>
+         </div>
+        
           
     </form>
     <br>
     <p class="signup">Don't have an account?
-        <a rel="noopener noreferrer" href="#" class="">Sign up</a>
+      <a rel="noopener noreferrer" href="javascript:void(0)" (click)="redirectToSignup()">Sign up</a>
     </p>
+    
+</div>
+<div class="intro" *ngIf="showIntro">
+  <h1 class="logoHeader">
+      <span class="logo">Subway</span>
+      <span class="logo"> Surfers</span>
+      <span class="logo" id="welcome-name"></span>
+  </h1>
 </div>

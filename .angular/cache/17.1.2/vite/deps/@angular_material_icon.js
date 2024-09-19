@@ -4,7 +4,7 @@ import {
 } from "./chunk-ZG5RSUH4.js";
 import {
   MatCommonModule
-} from "./chunk-F7IOTGV5.js";
+} from "./chunk-VJ22HQCP.js";
 import {
   DOCUMENT
 } from "./chunk-MATPOQ6Z.js";

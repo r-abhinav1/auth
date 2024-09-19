@@ -1,10 +1,4 @@
 import {
-  ArrayDataSource,
-  _RecycleViewRepeaterStrategy,
-  _VIEW_REPEATER_STRATEGY,
-  isDataSource
-} from "./chunk-ZW4TPEZR.js";
-import {
   animate,
   animateChild,
   group,
@@ -14,6 +8,12 @@ import {
   transition,
   trigger
 } from "./chunk-OG2JXQZT.js";
+import {
+  ArrayDataSource,
+  _RecycleViewRepeaterStrategy,
+  _VIEW_REPEATER_STRATEGY,
+  isDataSource
+} from "./chunk-ZW4TPEZR.js";
 import {
   A11yModule,
   BidiModule,
@@ -35,7 +35,7 @@ import {
   getRtlScrollAxisType,
   hasModifierKey,
   supportsScrollBehavior
-} from "./chunk-F7IOTGV5.js";
+} from "./chunk-VJ22HQCP.js";
 import {
   DOCUMENT,
   Location

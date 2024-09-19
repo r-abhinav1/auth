@@ -187,4 +187,8 @@ isImageCaptured:boolean = false;
       }
     }
   }
+
+  redirectToLogin():void{this.router.navigate(['/login']);
+
+  }
 }
