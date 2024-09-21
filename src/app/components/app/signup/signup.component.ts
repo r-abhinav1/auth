@@ -1,17 +1,15 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import * as faceapi from 'face-api.js';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgIf } from '@angular/common';
-import { MatFormField, MatFormFieldControl, MatFormFieldModule } from '@angular/material/form-field';
-import { SharedModule } from '../../../shared/shared.module';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-face-detection',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
-  standalone:true,
-  imports:[FormsModule,ReactiveFormsModule,NgIf,SharedModule]
+  standalone: true,
+  imports: [FormsModule, ReactiveFormsModule, NgIf]
 })
 export class SignupComponent implements AfterViewInit {
   @ViewChild('video', { static: false }) videoElement!: ElementRef<HTMLVideoElement>;
@@ -19,7 +17,7 @@ export class SignupComponent implements AfterViewInit {
   isCameraOn = false;
   private capturedImages: string[] = [];
 
-  constructor(private fb: FormBuilder,private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.signupForm = this.fb.group({
       username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -28,7 +26,6 @@ export class SignupComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // Check if videoElement is available
     if (this.videoElement) {
       this.loadFaceApiModels();
     } else {
@@ -87,7 +84,9 @@ export class SignupComponent implements AfterViewInit {
       })
       .catch(err => console.error('Error accessing media devices:', err));
   }
-isImageCaptured:boolean = false;
+
+  isImageCaptured: boolean = false;
+
   async captureImage(): Promise<void> {
     const video = this.videoElement?.nativeElement;
 
@@ -96,7 +95,6 @@ isImageCaptured:boolean = false;
       return;
     }
 
-    // Create a canvas to capture the image from video
     const canvas = document.createElement('canvas');
     canvas.width = video.width;
     canvas.height = video.height;
@@ -107,21 +105,17 @@ isImageCaptured:boolean = false;
       return;
     }
 
-    // Draw the current frame of the video onto the canvas
     context.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-    // Perform face detection on the captured image
     const detections = await faceapi.detectAllFaces(canvas, new faceapi.TinyFaceDetectorOptions())
       .withFaceLandmarks()
       .withFaceExpressions();
 
     if (detections.length > 0) {
       alert('Face detected!');
-      // Convert canvas to data URL (base64)
       const imageDataUrl = canvas.toDataURL('image/jpeg');
       this.capturedImages.push(imageDataUrl);
 
-      // Download the image as JPEG
       const link = document.createElement('a');
       link.href = imageDataUrl;
       link.download = 'captured_image.jpeg';
@@ -133,14 +127,15 @@ isImageCaptured:boolean = false;
     }
   }
 
-
   onCamera(): void {
     this.isCameraOn = !this.isCameraOn;
     if (this.isCameraOn) {
       this.startVideo();
     }
   }
-  profilePicUrl : any;
+
+  profilePicUrl: any;
+
   onFileChange(event: any): void {
     const file = event.target.files[0];
     if (file) {
@@ -155,36 +150,34 @@ isImageCaptured:boolean = false;
   onSubmit(): void {
     if (this.signupForm.valid) {
       const formValues = this.signupForm.value;
-  
-      // Get existing users from localStorage or initialize an empty array
+
       let users = JSON.parse(localStorage.getItem('users') || '[]');
-  
-      // Check if the user already exists
+
       const userExists = users.some((user: any) => user.username === formValues.username);
       const firstCapturedImage = this.capturedImages[0] || '';
       if (!userExists) {
-        // Add new user to the array with username, profilePicUrl, and an empty profilePics array
         const newUser = {
           username: formValues.username,
-          password: formValues.password, // Handle securely
+          password: formValues.password,
           profilePicUrl: this.profilePicUrl as string,
           identityPics: firstCapturedImage as string,
-          violatedImage:null // Initialize array with the first profile picture
+          violatedImage: null
         };
-  
-       
+
         users.push(newUser);
-  
-        // Save updated users array to localStorage
+
         localStorage.setItem('users', JSON.stringify(users));
-  
-        // Store the logged-in user's username in sessionStorage for the current session
+
         sessionStorage.setItem('username', formValues.username);
-  
+
         this.router.navigate(['/homepage'], { queryParams: { username: formValues.username } });
       } else {
         alert('User already exists. Please login.');
       }
     }
+  }
+
+  redirectToLogin(): void {
+    this.router.navigate(['/login']);
   }
 }
