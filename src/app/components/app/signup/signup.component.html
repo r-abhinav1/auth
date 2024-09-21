@@ -1,38 +1,76 @@
-<div class="form-container">
+<div id="background-container">
+  <div class="form-container">
     <p class="title">Sign Up</p>
     <form [formGroup]="signupForm">
-        <div class="input-group">
-            <label for="username">Username</label>
-            <input formControlName="username" type="text" id="username" placeholder="Enter Username">
-        </div>
-        <div class="input-group">
-          <label for="email">Email</label>
-          <input formControlName="email" type="text" id="email" placeholder="Enter Email">
-        </div>
-        <div class="input-group">
-            <label for="password">Password</label>
-            <input formControlName="password" type="password" id="password" placeholder="Enter password">
-        </div>
-        <div class="input-group">
-          <label for="profile-pic">Upload Profile Picture</label>
-          <input type="file" id="profile-pic" (change)="onFileChange($event)" accept="image/*" class="form-control">
-        </div>
-  
-        <!-- Video field inside form -->
-        <div class="input-group biometric-container" id="video">
-          <video #video id="video" width="420" height="360" class="border rounded" autoplay muted></video>
-          <br>
-          <button mat-raised-button color="primary" class="rounded-button capture-button" (click)="captureImage()">Capture Image</button>
-        </div>
-  
-        <br>
-        <br><br>
-        <!-- <button class="sign" [disabled]="!signupForm.valid || !isImageCaptured" (click)="onSubmit()">Submit</button> -->
-        <button class="sign" (click)="onSubmit()">Submit</button>
-      </form>
-    <br>
-    <p class="signup">Have an account?
-        <a rel="noopener noreferrer" href="#" class="">Login in</a>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input
+          formControlName="username"
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+        />
+      </div>
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input
+          formControlName="email"
+          type="text"
+          id="email"
+          placeholder="Enter Email"
+        />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          placeholder="Enter password"
+        />
+      </div>
+      <div class="input-group">
+        <label for="profile-pic">Upload Profile Picture</label>
+        <input
+          type="file"
+          id="profile-pic"
+          (change)="onFileChange($event)"
+          accept="image/*"
+          class="form-control"
+        />
+      </div>
+
+      <!-- Video field inside form -->
+      <div class="input-group biometric-container" id="video">
+        <video
+          #video
+          id="video"
+          width="420"
+          height="360"
+          class="border rounded"
+          autoplay
+          muted
+        ></video>
+        <br />
+        <button
+          mat-raised-button
+          color="primary"
+          class="rounded-button capture-button"
+          (click)="captureImage()"
+        >
+          Capture Image
+        </button>
+      </div>
+
+      <br />
+      <br /><br />
+      <!-- <button class="sign" [disabled]="!signupForm.valid || !isImageCaptured" (click)="onSubmit()">Submit</button> -->
+      <button class="sign" (click)="onSubmit()">Submit</button>
+    </form>
+    <br />
+    <p class="signup">
+      Have an account?
+      <a rel="noopener noreferrer" href="#" class="">Login in</a>
     </p>
   </div>
-  
+</div>

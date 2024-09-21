@@ -1,40 +1,68 @@
-
-
-<body style="background-image: url('https://getwallpapers.com/wallpaper/full/f/8/a/536041.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-
-<div class="form-container">
+<div id="background-container">
+  <div class="form-container">
     <p class="title">Login</p>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="input-group">
-            <label for="username">Username</label>
-            <input formControlName="username" type="text" id="username" placeholder="">
-        </div>
-        <div class="input-group">
-            <label for="password">Password</label>
-            <input formControlName="password" type="password" id="password" placeholder="">
-        </div>
-        <br>
-        <!-- <button class="sign" type="submit">Sign in</button> -->
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input
+          formControlName="username"
+          type="text"
+          id="username"
+          placeholder="Enter Username"
+        />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          formControlName="password"
+          type="password"
+          id="password"
+          placeholder="Enter Password"
+        />
+      </div>
+      <br />
+      <!-- <button class="sign" type="submit">Sign in</button> -->
+      <div id="button-container">
         <button class="animated-button sign" type="submit">
-            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-              ></path>
-            </svg>
-            <span class="text">Sign in</span>
-            <span class="circle"></span>
-            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-              ></path>
-            </svg>
-          </button>
-          
+          <svg
+            viewBox="0 0 24 24"
+            class="arr-2"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+          <span class="text">Sign in</span>
+          <span class="circle"></span>
+          <svg
+            viewBox="0 0 24 24"
+            class="arr-1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </form>
-    <br>
-    <p class="signup">Don't have an account?
-        <a rel="noopener noreferrer" href="#" class="">Sign up</a>
+    <br />
+    <p class="signup">
+      Don't have an account?
+      <a
+        rel="noopener noreferrer"
+        href="javascript:void(0)"
+        (click)="redirectToSignup()"
+        >Sign up</a
+      >
     </p>
+  </div>
+  <div class="intro" *ngIf="showIntro">
+    <h1 class="logoHeader">
+      <span class="logo">Secure</span>
+      <span class="logo"> Surfers</span>
+      <span class="logo" id="welcome-name"></span>
+    </h1>
+  </div>
 </div>
-
-</body>
