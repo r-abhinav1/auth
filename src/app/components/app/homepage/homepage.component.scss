@@ -1,4 +1,5 @@
 /* General Body Styling */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 body {
   margin: 0;
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
@@ -18,6 +19,20 @@ body {
   flex-grow: 1;
   font-size: 18px;
   color: #00adee; /* Bright cyan for the greeting text */
+<<<<<<< HEAD
+=======
+
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px; /* Adjust as needed */
+  font-weight: 400;
+  color: #2c2c2c; /* Dark gray text color */
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 20px;
+
+
+>>>>>>> 8002ee4a29f98c5d85613a81e75d3b7cfa8ae6fa
 }
 
 .profile-container {
@@ -43,9 +58,12 @@ body {
 
 /* Stories Section */
 .stories {
+<<<<<<< HEAD
   margin-top: 10px;
   margin-left:50px;
   margin-right: 50px;
+=======
+>>>>>>> 8002ee4a29f98c5d85613a81e75d3b7cfa8ae6fa
   display: flex;
   justify-content: space-around;
   padding: 10px;
@@ -159,6 +177,7 @@ body {
 /* Canvas and Video (for Camera feed) */
 #cameraFeed, #canvas {
   display: none;
+<<<<<<< HEAD
 }
 
 
@@ -228,4 +247,6 @@ body {
 /* button click effect*/
 .Btn:active {
   transform: translate(2px ,2px);
+=======
+>>>>>>> 8002ee4a29f98c5d85613a81e75d3b7cfa8ae6fa
 }
