@@ -1,4 +1,5 @@
 /* General Body Styling */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 body {
   margin: 0;
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
@@ -18,6 +19,17 @@ body {
   flex-grow: 1;
   font-size: 18px;
   color: #00adee; /* Bright cyan for the greeting text */
+
+  font-family: 'Great Vibes', cursive;
+  font-size: 60px; /* Adjust as needed */
+  font-weight: 400;
+  color: #2c2c2c; /* Dark gray text color */
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 1.2;
+  margin: 20px;
+
+
 }
 
 .profile-container {
