@@ -1,4 +1,15 @@
 /* Optional: Circle overlay for debugging or visual alignment */
+
+
+#background-container {
+  background-image: url('https://getwallpapers.com/wallpaper/full/f/8/a/536041.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+
 .circle-overlay {
   position: absolute;
   border: 2px solid rgba(0, 123, 255, 0.6);
