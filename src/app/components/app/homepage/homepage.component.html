@@ -1,8 +1,11 @@
 <!-- Header -->
-<div class="header">
-  <div class="greeting">
+<div class="header" style="height: fit-content;">
+  <div class="greeting" style="letter-spacing: 4px;">
     <!-- Display the greeting message -->
-    <span>Hello, {{ currentUser.username }}</span>
+      <button class="button" data-text="Awesome">
+        <span class="actual-text">&nbsp;{{ currentUser.username }}&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;{{ currentUser.username }}&nbsp;</span>
+      </button>
   </div>
   <div class="profile-container">
     <button class="profile-btn">Profile</button>
