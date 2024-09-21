@@ -1,15 +1,9 @@
-/* Color Palette */
-$deep-blue: #00234b;
-$light-cyan: #00c7e5;
-$darker-blue: #012f72;
-$bright-cyan: #00adee;
-$shade-blue: #00458c;
-
 /* General Body Styling */
 body {
   margin: 0;
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
-  background: linear-gradient(135deg, $bright-cyan 0%, $light-cyan 100%);
+  background: linear-gradient(135deg, #00234b 0%, #00458c 100%);
+  color: #fff; /* White text for better contrast on the blue background */
 }
 
 /* Header */
@@ -17,14 +11,13 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
-  background-color: $deep-blue;
+  background-color: #012f72; /* Darker blue */
 }
 
 .greeting {
   flex-grow: 1;
   font-size: 18px;
-  font-family: cursive;
-  color: white;
+  color: #00adee; /* Bright cyan for the greeting text */
 }
 
 .profile-container {
@@ -33,13 +26,13 @@ body {
 }
 
 .profile-btn, .logout-btn {
-  background-color: $bright-cyan;
+  background-color: #00adee; /* Bright cyan */
   border: none;
   border-radius: 5px;
   padding: 10px 15px;
-  color: $deep-blue;
-  font-weight: bold;
+  color: #fff; /* White text */
   cursor: pointer;
+  font-weight: bold;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -48,17 +41,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.profile-btn:active, .logout-btn:active {
-  transform: translateY(0);
-  box-shadow: none;
-}
-
 /* Stories Section */
 .stories {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background: rgba(255, 255, 255, 0.3);
+  background-color: #00234b; /* Deep blue */
   border-radius: 15px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
@@ -68,8 +56,8 @@ body {
   height: 60px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid white;
-  background: linear-gradient(135deg, $shade-blue 0%, $light-cyan 100%);
+  border: 3px solid #fff;
+  background: linear-gradient(135deg, #00adee 0%, #00c7e5 100%); /* Gradient using cyan shades */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
@@ -88,9 +76,9 @@ body {
 }
 
 .post-card {
-  background-color: white;
+  background-color: #012f72; /* Darker blue background for posts */
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 600px;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
@@ -98,7 +86,7 @@ body {
 
 .post-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .post-image {
@@ -109,46 +97,48 @@ body {
 .content {
   padding: 15px;
   font-size: 14px;
-  color: $deep-blue;
+  color: #fff; /* White text for the post content */
 }
 
 .actions {
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  border-top: 1px solid $darker-blue;
+  border-top: 1px solid #00adee; /* Cyan border for post actions */
 }
 
 .actions .btn {
-  background-color: $light-cyan;
+  background-color: #00adee; /* Bright cyan */
   border: none;
-  color: $deep-blue;
+  color: #fff;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .actions .btn:hover {
-  background-color: $bright-cyan;
+  background-color: #00c7e5; /* Lighter cyan shade */
 }
 
 /* Comment Box */
 .comment-box {
   margin-top: 10px;
   padding: 10px;
-  background-color: $shade-blue;
+  background-color: #00458c; /* Deep blue for comment box */
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .comment-box textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid $deep-blue;
+  border: 1px solid #00adee;
   border-radius: 4px;
   resize: none;
   font-size: 14px;
   margin-bottom: 10px;
+  background-color: #00234b; /* Darker blue for textarea background */
+  color: #fff; /* White text */
 }
 
 .comments {
@@ -156,10 +146,14 @@ body {
 }
 
 .comments p {
-  background-color: $darker-blue;
-  color: white;
+  background-color: #012f72;
   padding: 8px;
   border-radius: 4px;
   margin-bottom: 5px;
+  color: #fff;
 }
 
+/* Canvas and Video (for Camera feed) */
+#cameraFeed, #canvas {
+  display: none;
+}
